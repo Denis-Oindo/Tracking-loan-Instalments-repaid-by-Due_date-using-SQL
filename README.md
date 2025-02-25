@@ -1,4 +1,5 @@
 **Overview**
+
 This SQL query provides an analysis of loan installment repayment performance within a specific date range. 
 It calculates the total number of installments, the number of paid installments, the total outstanding amount, the total amount paid, and the repayment rate for each due date.
 
