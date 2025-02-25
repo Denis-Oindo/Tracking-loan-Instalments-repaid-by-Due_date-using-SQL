@@ -1,0 +1,17 @@
+SELECT 
+    due_date, 
+    COUNT(*) AS total_installments, 
+    COUNT(*) FILTER (WHERE installment_status = 'PAID') AS installments_paid, 
+    SUM(derived_charged_total) AS total_outstanding_amount, 
+    SUM(derived_paid_total) AS total_amount_paid, 
+    ROUND(
+        CASE 
+            WHEN SUM(derived_charged_total) > 0 
+            THEN (SUM(derived_paid_total) / SUM(derived_charged_total)) 
+            ELSE 0 
+        END, 4
+    ) AS repayment_rate
+FROM platform.loan_installment 
+WHERE due_date BETWEEN '2025-01-01' AND '2025-01-10' 
+GROUP BY due_date 
+ORDER BY due_date;
