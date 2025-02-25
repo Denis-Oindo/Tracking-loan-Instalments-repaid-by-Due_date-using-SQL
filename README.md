@@ -9,3 +9,7 @@ It calculates the total number of installments, the number of paid installments,
 2. Monitoring collection efficiency over a specific period.
 3. Identifying trends in loan repayments.
 4. Supporting financial decision-making and risk assessment.
+
+**Output**
+
+![image](https://github.com/user-attachments/assets/f6355895-3565-457a-9824-2a3422dfa4c7)
